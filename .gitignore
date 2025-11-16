@@ -1,0 +1,34 @@
+# Build directories
+/build/
+/cmake-build-*/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# Binary artifacts
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Editor backups and OS files
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
