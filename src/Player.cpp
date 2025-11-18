@@ -49,3 +49,7 @@ sf::Vector2f Player::getPosition() const {
 sf::FloatRect Player::getBounds() const {
     return shape.getGlobalBounds();
 }
+
+void Player::setPosition(const sf::Vector2f& position) {
+    shape.setPosition(position);
+}

@@ -8,6 +8,10 @@ Game::Game()
       isMovingLeft(false), isMovingRight(false) {
 
     window.setFramerateLimit(60);
+
+    obstacle.setSize(sf::Vector2f(200.0f, 50.0f));
+    obstacle.setFillColor(sf::Color::Red);
+    obstacle.setPosition(300.0f, 400.0f);
 }
 
 void Game::run() {
@@ -41,11 +45,18 @@ void Game::processEvents() {
 
 void Game::update(float deltaTime) {
     player.handleInput();
+
+    sf::Vector2f oldPos = player.getPosition();
     player.update(deltaTime);
+
+    if (player.getBounds().intersects(obstacle.getGlobalBounds())) {
+        player.setPosition(oldPos);
+    }
 }
 
 void Game::render() {
     window.clear(sf::Color::Black);
+    window.draw(obstacle);
     player.draw(window);
     window.display();
 }

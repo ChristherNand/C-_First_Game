@@ -13,6 +13,7 @@ public:
 
     sf::Vector2f getPosition() const;
     sf::FloatRect getBounds() const;
+    void setPosition(const sf::Vector2f& position);
 
 private:
     sf::RectangleShape shape;

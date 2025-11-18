@@ -17,6 +17,7 @@ private:
 
     sf::RenderWindow window;
     Player player;
+    sf::RectangleShape obstacle;
     bool isMovingUp;
     bool isMovingDown;
     bool isMovingLeft;

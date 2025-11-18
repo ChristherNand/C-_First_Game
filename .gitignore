@@ -32,3 +32,6 @@ compile_commands.json
 *.swo
 .DS_Store
 Thumbs.db
+
+# Local C++ theory notes
+/lessons
